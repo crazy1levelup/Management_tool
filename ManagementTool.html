@@ -18,48 +18,43 @@
     tr:hover{
       background-color: #EEE; cursor: pointer
     }
-    input[type=text], select {
+    input, select {
       display: inline;
       width: 20%;
       padding: 6px 10px;
-      margin: 2px 0;
+      margin: 5px 10px 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      box-sizing: border-box;
+      vertical-align: middle;
+    }
+    textarea{
+      width: 20%;
+      padding: 6px 10px;
+      margin: 5px 10px 5px 0;
+      display: inline;
       border: 1px solid #ccc;
       border-radius: 2px;
       box-sizing: border-box;
     }
-    input[type=number], select {
-      width: 20%;
-      padding: 6px 10px;
-      margin: 2px 0;
-      display: inline;
-      border: 1px solid #ccc;
-      border-radius: 2px;
-      box-sizing: border-box;
+    DIV.tab
+    {
+      width: 80%;
+      margin-right: auto;
+      margin-left: left;
+      overflow: hidden;
+      zoom: 1;
+      padding-bottom: 50px;
 }
-textarea{
-  width: 20%;
-  padding: 6px 10px;
-  margin: 2px 0;
-  display: inline;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-DIV.tab
-{
-    width: 80%;
-    margin-right: auto;
-    margin-left: left;
-
-    overflow: hidden; /* Fixing the problem in modern browsers */
-    zoom: 1; /* Fixing in old IE by applying hasLayout */
-    padding-bottom: 50px; /* I prefer padding here than margin in table3 */
+.myForm {
+ flex-flow: row wrap;
 }
     </style>
   </head>
   <body>
+    <hr>
     <button type="button" id="onNewForm">Add Issue</button>
-    <form id="newForm" name="newForm">
+    <form id="newForm" name="newForm" class="myForm">
       <h3>User:</h3>
       Name: <input type="text" id="name">
       Project: <input type="text" id="project">
@@ -79,6 +74,7 @@ DIV.tab
       <button type="button" id="id-resolved">Resolved</button>
       <button type="button" id="id-ready">Test it</button>
     </form>
+    <input type="text" id="myInput" onkeyup="searchStatus()" placeholder="Search status">
       <hr>
     <div class="tab" >
       <table id="showElements">
@@ -98,7 +94,6 @@ DIV.tab
         </tr>
       </table>
     </div>
-
     <script src="mngTool.js" charset="utf-8"></script>
   </body>
 </html>
