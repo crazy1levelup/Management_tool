@@ -43,7 +43,6 @@ function EmptyInput() {
 
   function EmptyInputUser() {
     var isEmpty = false,
-    name = document.getElementById("name").value,
     type = document.getElementById("type").value,
     issueName = document.getElementById("issueName").value,
     sprint = document.getElementById("sprint").value,
