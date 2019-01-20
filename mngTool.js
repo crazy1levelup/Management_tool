@@ -55,7 +55,6 @@ function EmptyInput() {
       alert("All fields must be added");
       isEmpty = true;
     }
-
   return isEmpty;
 }
 
@@ -102,7 +101,6 @@ function EmptyInput() {
          }
        }
 
-
        var projObj={};
        projObj.project = project;
        projObj.idProject = idProject;
@@ -142,17 +140,6 @@ function updateRow() {
     }
   }
 }
-
-/*function addTasks() {
-  var taskList =document.getElementById("myUl") rIndex,cIndex;
-    for(var i =1; i < table.rows.length; i++){
-      table.rows[i].cells[7].onclick = function() {
-        rIndex = this.parentElement.rowIndex;
-        cIndex = this.cellIndex;
-        console.log(rIndex + " " + cIndex);
-      }
-    }
-}*/
 
 function addTask(){
   var task;
