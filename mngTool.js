@@ -146,6 +146,8 @@ function addTask(){
   this.taskArr.push(task);
   console.log(taskArr);
   document.getElementById("tasks").value="";
+  document.getElementById("showTask").innerHTML =taskArr;
+
 }
 
 function searchStatus() {
@@ -224,6 +226,7 @@ function resetForm() {
   document.getElementById("description").value = ""
   document.getElementById("tasks").value = ""
   document.getElementById("comments").value = ""
+  document.getElementById("showTask").innerHTML = ""
 }
 
 function getTodayDate() {
