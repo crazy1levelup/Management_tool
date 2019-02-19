@@ -39,6 +39,7 @@ function EmptyInput() {
     alert("All fields must be added");
     isEmpty = true;
   }
+  return isEmpty;
 }
 
   function EmptyInputUser() {
