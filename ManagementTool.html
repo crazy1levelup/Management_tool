@@ -3,69 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <style>
-    table {border-collapse: collapse}
-    th, td {
-      border: 1px #DDD solid;
-      padding: 2px 8px;
-    }
-    th {
-      background: #EEE;
-    }
-    tr{
-      transition: :all .25s ease-in-out
-    }
-    tr:hover{
-      background-color: #EEE; cursor: pointer
-    }
-    input, select {
-      display: inline;
-      width: 20%;
-      padding: 6px 10px;
-      margin: 5px 10px 5px 0;
-      border: 1px solid #ccc;
-      border-radius: 2px;
-      box-sizing: border-box;
-      vertical-align: middle;
-    }
-    textarea{
-      width: 20%;
-      padding: 6px 10px;
-      margin: 5px 10px 5px 0;
-      display: inline;
-      border: 1px solid #ccc;
-      border-radius: 2px;
-      box-sizing: border-box;
-    }
-    DIV.tab
-    {
-      width: 80%;
-      margin-right: auto;
-      margin-left: left;
-      overflow: hidden;
-      zoom: 1;
-      padding-bottom: 50px;
-}
-.myForm {
- flex-flow: row wrap;
-}
-    </style>
+    <link rel="stylesheet" href="mngstyle.css">
   </head>
   <body>
     <hr>
     <button type="button" id="onNewForm">Add Issue</button>
     <form id="newForm" name="newForm" class="myForm">
       <h3>User:</h3>
-      Name: <input type="text" id="name">
-      Project: <input type="text" id="project">
+      <input type="text" id="name" placeholder="Name">
+      <input type="text" id="project" placeholder="Project">
       <h3>Issue:</h3>
-      Type: <input type="text" id="type">
-      Issue Name: <input type="text" id="issueName"></br>
-      Sprint: <input type="number" id="sprint">
-      Assignee: <input type="text" id="assignee"></br>
-      Description: <textarea rows="5" cols="25" id="description"></textarea></br>
-      Tasks: <input type="text" id="tasks"><button type="button" onClick=addTask()>Add Task</button><p id="showTask"></p> </br>
-      Comments: <textarea rows="5" cols="25" id="comments"></textarea></br>
+      <input type="text" id="type" placeholder="Type">
+      <input type="text" id="issueName" placeholder="Issue name"></br>
+      <input type="number" id="sprint" placeholder="Sprint">
+      <input type="text" id="assignee" placeholder="Assignee"></br>
+      <textarea rows="5" cols="25" id="description" placeholder="Description"></textarea></br>
+      <input type="text" id="tasks" placeholder="Tasks"><button type="button" onClick=addTask()>Add Task</button><p id="showTask"></p> </br>
+      <textarea rows="5" cols="25" id="comments" placeholder="Comments"></textarea></br>
       <button type="button" onclick="addRow()">Submit</button>
       <button type="button" onclick="editRow()">Update</button>
       <button type="button" onclick="removeRow()">Remove</button>
@@ -73,9 +27,9 @@
       <button type="button" id="id-rework">Rework</button>
       <button type="button" id="id-resolved">Resolved</button>
       <button type="button" id="id-ready">Test it</button>
+      <input type="text" id="myInput" onkeyup="searchStatus()" placeholder="Search status">
     </form>
-    <input type="text" id="myInput" onkeyup="searchStatus()" placeholder="Search status">
-      <hr>
+    <hr>
     <div class="tab" >
       <table id="showElements">
         <tr>
